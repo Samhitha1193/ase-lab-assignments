@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+
+    <style>
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            color: purple;
+            font-family: "Times New Roman", Times, serif;
+        }
+    </style>
+</head>
+<body  align="center" background="maxresdefault.jpg">
+<div>
+<form action="/registerpage.html">
+    <h1> Welcome to our website !!</h1><br/>
+    <input class="button" type="button" onclick="register()" value="Register"/>
+</form>
+<form action="/login2.html">
+    <input class="button" style="background-color: blue" type="button" onclick="login()" value="Sign in"/>
+</form>
+</div>
+</body>
+</html>
+<script>
+    function login(){
+        self.location="login2.html";
+
+    }
+    function register(){
+        self.location="registerpage.html";
+
+    }
+
+</script>

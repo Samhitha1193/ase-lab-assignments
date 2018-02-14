@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.1/angular.min.js"></script>
+<script src="script.js">
+</script>
+<html>
+
+<style>
+
+    .caloriesModule {
+
+        border: 3px #B6B6B6;
+        padding: 0em;
+    }
+
+
+    .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        color: #008CBA;
+        font-family: "Times New Roman", Times, serif;
+    }
+
+    .bg {
+        /* The image used */
+        background-image: url("calories.jpg");
+        height: 600px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<body >
+
+
+<div ng-app="scotchApp" ng-controller="calories" align="center" class="bg">
+    <form>
+        <h1> Nutritive Values</h1><br/>
+        <label>Please enter the food item:</label>
+
+        <input type="text" name="food_item" id="food_item" >
+        <br/><br>
+
+        <button id="btn" class="button" ng-click="getCalories()"> Click here to Calculate Calories  </button>
+        <br/>
+        <br/>
+        <div class="caloriesModule">
+            <p class="weightcalories" ng-bind-html-unsafe="Caloriesout.html"></p>
+
+        </div>
+    </form>
+</div>
+</body>
+</html>
